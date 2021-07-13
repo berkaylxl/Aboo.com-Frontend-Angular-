@@ -15,7 +15,6 @@ export class TopicComponent implements OnInit {
   ngOnInit(): void {
     this.getTopics();
   }
-
   getTopics() {
     this.topicService.getTopics().subscribe(response=>{
       this.topics=response.data
