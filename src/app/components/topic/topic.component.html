@@ -1,7 +1,12 @@
 
+           
             <ul class="list-group">
-                <li *ngFor="let topic of topics" class="list-group-item d-flex justify-content-between align-items-center">
-                    {{topic.title}}
+                <li (click)="setCurrentTopic(topic)"
+                routerLink="/entries/{{topic.id}}"
+                *ngFor="let topic of topics" 
+                class="list-group-item d-flex justify-content-between align-items-center">
+                    {{topic.topicTitle}}
                     <span class="badge bg-dark rounded-pill">1</span>
                 </li>
             </ul>
+           

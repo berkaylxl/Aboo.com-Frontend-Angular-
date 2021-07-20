@@ -1,20 +1,22 @@
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from '../models/user';
 import { ObjResponseModel } from '../models/objResponseModel';
-import { UserPhoto } from '../models/userPhoto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserPhotoService {
+export class UserService {
+
   apiUrl = 'https://localhost:44314/api/';
+
   constructor(private httpClient:HttpClient) { }
 
 
-  getPhotoByUserId(userId:number):Observable<ObjResponseModel<UserPhoto>>{
-        return this.httpClient
-        .get<ObjResponseModel<UserPhoto>>
-        (this.apiUrl+"userPhotos/getbyid?userid="+userId)
-  }
+getUserById(id:number):Observable<ObjResponseModel<User>>
+{
+  return this.httpClient.get<ObjResponseModel<User>>(this.apiUrl+"users/getbyid?id="+id)
+}
+
 }

@@ -1,7 +1,7 @@
 export interface Topic {
-    topicId:number;
+    id:number;
     userId:number;
-    title:string;
+    topicTitle:string;
     topicText:string;
     creationDate:Date;
 }

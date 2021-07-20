@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TopicComponent } from './components/topic/topic.component';
 import { EntryComponent } from './components/entry/entry.component';
 import { NaviComponent } from './components/navi/navi.component';
+import { StartPanelComponent } from './components/start-panel/start-panel.component';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { NaviComponent } from './components/navi/navi.component';
     TopicComponent,
     EntryComponent,
     NaviComponent,
+    StartPanelComponent,
+   
     
   ],
   imports: [

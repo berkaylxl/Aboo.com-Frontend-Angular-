@@ -1,7 +1,7 @@
 export interface Comment{
-    commentId:number
+    commentid:number
     topicId:number
     commentOwner:number
-    commnetText:string
+    commentText:string
     creationDate:Date
 }

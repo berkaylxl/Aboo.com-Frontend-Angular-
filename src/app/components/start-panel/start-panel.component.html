@@ -1,0 +1,24 @@
+<div>
+    <div class="container" 
+    *ngFor="let topic of topics"
+    style="margin-top: 1em; ">
+        <div class="row">
+            <div class="col-9">
+                <h3>{{topic.topicTitle}}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>{{topic.topicText}}</p>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p style="float: right;">{{topic.creationDate|date:"dd.MM.y"}}</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+   
+</div>
